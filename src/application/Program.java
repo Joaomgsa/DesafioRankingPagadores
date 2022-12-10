@@ -1,5 +1,7 @@
 package application;
 
+import services.PaymentService;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,9 +12,8 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Entre o nome do arquivo: ");
-        String path = sc.next();
+        /* Nome do arquivo  in.txt */
+        String path = "in.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))){
             Map<String,Integer> map = new TreeMap<>();
@@ -30,10 +31,20 @@ public class Program {
                 line = br.readLine();
             }
             System.out.println("Ranking de Pagamentos por empresa :");
+
+
             for (String key : map.keySet()){
-                System.out.println(key +": "+ map.get(key));
+                System.out.println(key +": "+ map.get(key)+ " Pagamentos Realizados");
             }
 
+            int totalKeys = map.size();
+
+            PaymentService ps = new PaymentService();
+
+            int sum = ps.sumOfPayments(map);
+            double media = (sum/totalKeys);
+            System.out.println("total de pagamentos realizados: "+ sum);
+            System.out.println("Média de pagamentos realizados por empresa: "+ media);
         }
         catch(IOException e){
             System.out.println("Erro:" + e.getMessage());
