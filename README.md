@@ -6,4 +6,4 @@ Para isso disponibilizou a tabela de status dos pagamentos previstos por empresa
 
 <p>Dado o enunciado em questão, crie um bloco de código em Java que calcule a média de pagamentos por empresa e publique o ranking das empresas.</p>
 
-<img src="payments.png">
+<img src="payments.png" style=" align: center">
