@@ -34,7 +34,7 @@ public class Program {
 
 
             for (String key : map.keySet()){
-                System.out.println(key +": "+ map.get(key)+ " Pagamentos Realizados");
+                System.out.println(key +" : "+ map.get(key)+ " Pagamentos Realizados");
             }
 
             int totalKeys = map.size();
@@ -42,9 +42,9 @@ public class Program {
             PaymentService ps = new PaymentService();
 
             int sum = ps.sumOfPayments(map);
-            double media = (sum/totalKeys);
-            System.out.println("total de pagamentos realizados: "+ sum);
-            System.out.println("Média de pagamentos realizados por empresa: "+ media);
+            double media = (sum / totalKeys);
+            System.out.println("total de pagamentos realizados : "+ sum);
+            System.out.println("Média de pagamentos realizados por empresa : "+ media);
         }
         catch(IOException e){
             System.out.println("Erro:" + e.getMessage());
