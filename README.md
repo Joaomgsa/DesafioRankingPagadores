@@ -1,4 +1,4 @@
-# Desafio
+# Desafio NEOBIZ
 
 ## 
 <p>Ranking de pagadores: a Consultoria PLANNING foi contratada pela empresa PAGUE para construir um modelo que calculasse o ranking de bons pagadores on-line.
