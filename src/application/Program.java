@@ -14,7 +14,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
         /* Nome do arquivo  in.txt */
         String path = "in.txt";
-
+        // primeiro bloco try
         try (BufferedReader br = new BufferedReader(new FileReader(path))){
             Map<String,Integer> map = new TreeMap<>();
             String line = br.readLine();
